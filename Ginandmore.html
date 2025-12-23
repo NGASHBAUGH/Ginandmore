@@ -3,138 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gin and More - Premium Italian Gin</title>
+    <title>Gin & More - Artisanal Italian Gin by Francesco Mattài Del Moro</title>
+    <meta name="description" content="Gin & More - Handcrafted Italian gin born from gratitude, friendship, and love. Created by Francesco Mattài Del Moro.">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Georgia', 'Times New Roman', serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #faf8f5;
             color: #333;
+            line-height: 1.6;
         }
         header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
+            background-color: #0f1e2d;
+            padding: 50px 20px;
             text-align: center;
+            color: white;
         }
-        header h1 {
+        header img {
+            max-width: 320px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        header p {
+            font-style: italic;
+            font-size: 1.3em;
             margin: 0;
+            opacity: 0.9;
         }
         nav {
-            background-color: #34495e;
-            padding: 10px;
+            background-color: #1c3144;
+            padding: 15px;
             text-align: center;
         }
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 0 25px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #d4a5a5;
         }
         section {
-            padding: 40px 20px;
-            max-width: 1200px;
+            padding: 60px 20px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         #about {
             background-color: white;
+            text-align: center;
+        }
+        #about h2 {
+            color: #c0392b;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        #about h4 {
+            color: #8e44ad;
+            font-style: italic;
+            margin-top: 40px;
         }
         #products {
-            background-color: #ecf0f1;
+            background-color: #f4f1ed;
+        }
+        #products h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 50px;
+            font-size: 2.2em;
+        }
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
         }
         .product {
-            display: inline-block;
-            width: 30%;
-            margin: 1.5%;
             background: white;
-            padding: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
             text-align: center;
-            vertical-align: top;
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: translateY(-10px);
         }
         .product img {
             width: 100%;
-            height: auto;
-            max-height: 400px;
-            object-fit: contain;
+            height: 400px;
+            object-fit: cover;
+        }
+        .product h3 {
+            color: #c0392b;
+            margin: 20px 0 10px;
+        }
+        .product p {
+            padding: 0 20px 30px;
+            font-size: 1em;
         }
         #contact {
             background-color: white;
-        }
-        footer {
-            background-color: #2c3e50;
-            color: white;
             text-align: center;
-            padding: 10px;
-            position: relative;
-            width: 100%;
-            margin-top: 40px;
+        }
+        #contact h2 {
+            color: #2c3e50;
         }
         .instagram-link {
-            display: block;
-            margin: 20px auto;
-            text-align: center;
+            margin: 40px 0;
+            font-size: 1.4em;
         }
         .instagram-link a {
             color: #e4405f;
-            font-weight: bold;
             text-decoration: none;
+            font-weight: bold;
+        }
+        .instagram-link a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #0f1e2d;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            .product {
+                width: 90%;
+            }
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Gin and More</h1>
-        <p>Premium Italian Gin Crafted with Passion</p>
+        <!-- Direct GitHub raw link to your logo (replace extension if needed, e.g., .jpg) -->
+        <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Logo/Logo%20(1).png" alt="Gin & More Logo">
+        <p>Handcrafted Italian Gin by Francesco Mattài Del Moro</p>
     </header>
-    
+
     <nav>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
+        <a href="#about">Our Story</a>
+        <a href="#products">Our Gins</a>
         <a href="#contact">Contact</a>
     </nav>
-    
+
     <section id="about">
-        <h2>About Us</h2>
-        <p>Gin and More is a family-owned Italian gin company dedicated to creating high-quality, artisanal gins using the finest local ingredients. Founded by [Your Relative's Name], we blend traditional Italian botanicals with innovative flavors to bring you a unique gin experience.</p>
-        <p>Follow us on Instagram for the latest updates, recipes, and behind-the-scenes looks!</p>
+        <h2>The Story of Gin & More</h2>
+        <p><strong>Created by Francesco Mattài Del Moro</strong></p>
+        
+        <p>In autumn 2023, a simple gin tasting gift sparked a dream. Francesco designed the logo and imagined a niche, artisanal gin from his Italian homeland — one made in small batches with passion and meaning.</p>
+
+        <h4>Gratitude</h4>
+        <p>The first distillate features pink pepper, false pepper, and <em>Artemisia</em> — the miraculous herb. This edition is dedicated to <strong>Fausto</strong>, a dear person who always hoped for a miracle. The very first bottle was made in his memory.</p>
+
+        <h4>Friendship</h4>
+        <p>The second recipe adds <strong>Moringa</strong> — known as the "tree of miracles" — with origins in India and Pakistan. Brought back by his close friend <strong>Jacopo</strong> after a trip to India, it gives the gin a fresh, summery character.</p>
+
+        <h4>Love</h4>
+        <p>The latest creation is dedicated to Francesco’s children — <strong>Giacomo, Costanza, and Filippo</strong>. Inspired daily by their unique spirits, he added birch lymph, celebrated for its purifying properties and known as the "lymph of life."</p>
+
+        <h4>The Logo</h4>
+        <p>Designed by Francesco himself, the two <strong>M</strong>s represent his surname <em>Mattài Del Moro</em>, while the heart-shaped <strong>D</strong> symbolizes the deep love binding his family origins.</p>
+
         <div class="instagram-link">
-            <a href="https://www.instagram.com/_ginandmore_/" target="_blank">Visit our Instagram: @_ginandmore_</a>
+            <a href="https://www.instagram.com/_ginandmore_/" target="_blank">Follow the journey on Instagram → @_ginandmore_</a>
         </div>
     </section>
-    
+
     <section id="products">
-        <h2>Our Products</h2>
-        <div class="product">
-            <img src="https://cloudfront-eu-central-1.images.arcpublishing.com/williamreed/3GFKOTRTNNKFHKP2NSDX7RGC4Q.jpg" alt="Premium Italian Gin Bottle">
-            <h3>Classic Gin</h3>
-            <p>A smooth, juniper-forward gin perfect for classic cocktails.</p>
-        </div>
-        <div class="product">
-            <img src="https://www.thegincorner.com/asap-content/uploads/2019/12/roby-marton-scaled.jpg" alt="Roby Marton Italian Premium Gin">
-            <h3>Premium Dry Gin</h3>
-            <p>Artisanal blend with bold Italian botanicals.</p>
-        </div>
-        <div class="product">
-            <img src="https://www.friarwood.com/cdn/shop/files/seatrus-gin-wrapped-gift.png?v=1744127183&width=1080" alt="Italian Mediterranean Gin">
-            <h3>Mediterranean Edition</h3>
-            <p>Infused with coastal herbs and citrus for a refreshing taste.</p>
+        <h2>Our Gins</h2>
+        <div class="products-grid">
+            
+            <div class="product">
+                <!-- Replace with your actual bottle file path, e.g.: https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Gratitude/bottle.jpg -->
+                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Gratitude/example-bottle.jpg" alt="Gin & More - Gratitude Edition">
+                <h3>Gratitude</h3>
+                <p>First edition with pink pepper and sacred Artemisia.<br>Dedicated to Fausto.</p>
+            </div>
+            
+            <div class="product">
+                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Friendship/example-bottle.jpg" alt="Gin & More - Friendship Edition">
+                <h3>Friendship</h3>
+                <p>Infused with Moringa — the tree of miracles.<br>Brought from India by Jacopo.</p>
+            </div>
+            
+            <div class="product">
+                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Love/example-bottle.jpg" alt="Gin & More - Love Edition">
+                <h3>Love</h3>
+                <p>With purifying birch lymph.<br>Dedicated to Giacomo, Costanza, and Filippo.</p>
+            </div>
+            
         </div>
     </section>
-    
+
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Email: info@ginandmore.it</p>
-        <p>Phone: +39 123 456789</p>
-        <p>Address: [Company Address in Italy]</p>
+        <p>For inquiries, private tastings, or to order:</p>
+        <p><strong>Email:</strong> info@ginandmore.it</p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/_ginandmore_/" target="_blank">@_ginandmore_</a></p>
+        <p>Handcrafted with passion in Italy</p>
     </section>
-    
+
     <footer>
-        &copy; 2025 Gin and More. All rights reserved.
+        &copy; 2025 Gin & More • Created by Francesco Mattài Del Moro • All rights reserved
     </footer>
+
 </body>
 </html>
