@@ -3,55 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gin & More - Artisanal Italian Gin</title>
+    <title>Home - Gin & More</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<script>
-  fetch('header.html')
-    .then(response => {
-      if (!response.ok) throw new Error('Header not found');
-      return response.text();
-    })
-    .then(data => document.body.insertAdjacentHTML('afterbegin', data))
-    .catch(err => console.error(err));
-
-  fetch('footer.html')
-    .then(response => {
-      if (!response.ok) throw new Error('Footer not found');
-      return response.text();
-    })
-    .then(data => document.body.insertAdjacentHTML('beforeend', data))
-    .catch(err => console.error(err));
-</script>
 <body>
 
-    <header>
-        <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/refs/heads/main/Images/Logo/Logo%20(1).jpg" alt="Gin & More Logo">
-    </header>
+    <div class="page-content">
+        <div class="hero" style="background-image: url('https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Rugby_Gin.jpg');">
+            <h1>Gin & More</h1>
+            <p>Handcrafted with Heart by Francesco Mattài Del Moro</p>
+        </div>
 
-    <nav>
-        <a href="home.html">Home</a>
-        <a href="story.html">Our Story</a>
-        <a href="gins.html">Our Gins</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <section class="hero">
-        <h1>Gin & More</h1>
-        <p>Handcrafted with Heart by Francesco Mattài Del Moro</p>
-    </section>
-
-    <section class="gallery">
         <h2>Available Now</h2>
         <div class="gallery-grid">
             <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Gin_For_Sale_1.jpg" alt="Gin For Sale">
             <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Ginandmore_Sale_1.jpg" alt="Ginandmore Sale 1">
             <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Ginandmore_Sale_2.jpg" alt="Ginandmore Sale 2">
         </div>
-    </section>
+    </div>
 
     <script>
-      fetch('footer.html').then(r => r.text()).then(data => document.body.insertAdjacentHTML('beforeend', data));
+        fetch('header.html').then(r => r.text()).then(data => document.body.insertAdjacentHTML('afterbegin', data));
+        fetch('footer.html').then(r => r.text()).then(data => document.body.insertAdjacentHTML('beforeend', data));
     </script>
 
 </body>
