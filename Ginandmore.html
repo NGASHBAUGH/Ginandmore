@@ -4,52 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gin & More - Artisanal Italian Gin by Francesco Mattài Del Moro</title>
-    <meta name="description" content="Gin & More - Handcrafted Italian gin born from gratitude, friendship, and love. Created by Francesco Mattài Del Moro.">
+    <meta name="description" content="Gin & More - Handcrafted Italian gin born from gratitude, friendship, and love.">
     <style>
         body {
-            font-family: 'Georgia', 'Times New Roman', serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #faf8f5;
+            background-color: #f8f8f8;
             color: #333;
             line-height: 1.6;
         }
-        header {
-            background-color: #0f1e2d;
-            padding: 50px 20px;
+        .hero {
+            background-image: url('https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Rugby_Gin.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.7);
         }
-        header img {
-            max-width: 320px;
+        .hero img {
+            max-width: 350px;
             height: auto;
             margin-bottom: 20px;
         }
-        header p {
-            font-style: italic;
-            font-size: 1.3em;
+        .hero h1 {
+            font-size: 3.5em;
             margin: 0;
-            opacity: 0.9;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin: 10px 0;
         }
         nav {
-            background-color: #1c3144;
+            background-color: rgba(15, 30, 45, 0.95);
             padding: 15px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         nav a {
             color: white;
-            margin: 0 25px;
+            margin: 0 30px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 1.2em;
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #d4a5a5;
+            color: #ff6b6b;
         }
         section {
-            padding: 60px 20px;
-            max-width: 1100px;
+            padding: 80px 20px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         #about {
@@ -58,98 +70,91 @@
         }
         #about h2 {
             color: #c0392b;
-            font-size: 2em;
-            margin-bottom: 30px;
+            font-size: 2.5em;
         }
         #about h4 {
-            color: #8e44ad;
+            color: #6a89a3;
             font-style: italic;
-            margin-top: 40px;
+            margin-top: 50px;
+            font-size: 1.8em;
         }
         #products {
-            background-color: #f4f1ed;
+            background-color: #f0f4f7;
         }
         #products h2 {
             text-align: center;
+            font-size: 2.8em;
+            margin-bottom: 60px;
             color: #2c3e50;
-            margin-bottom: 50px;
-            font-size: 2.2em;
         }
         .products-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
         }
         .product {
             background: white;
-            width: 300px;
-            border-radius: 15px;
+            width: 350px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.4s, box-shadow 0.4s;
         }
         .product:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
         .product img {
             width: 100%;
-            height: 400px;
+            height: 450px;
             object-fit: cover;
         }
         .product h3 {
             color: #c0392b;
-            margin: 20px 0 10px;
+            font-size: 2em;
+            margin: 25px 0 10px;
         }
         .product p {
-            padding: 0 20px 30px;
-            font-size: 1em;
+            padding: 0 30px 40px;
+            font-size: 1.1em;
         }
         #contact {
             background-color: white;
             text-align: center;
         }
-        #contact h2 {
-            color: #2c3e50;
-        }
         .instagram-link {
-            margin: 40px 0;
-            font-size: 1.4em;
+            margin: 50px 0;
+            font-size: 1.6em;
         }
         .instagram-link a {
             color: #e4405f;
             text-decoration: none;
             font-weight: bold;
-        }
-        .instagram-link a:hover {
-            text-decoration: underline;
+            border-bottom: 2px solid #e4405f;
         }
         footer {
             background-color: #0f1e2d;
             color: white;
             text-align: center;
-            padding: 25px;
-            font-size: 0.9em;
+            padding: 30px;
+            font-size: 1em;
         }
         @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-            .product {
-                width: 90%;
-            }
+            .hero h1 { font-size: 2.5em; }
+            nav a { display: block; margin: 15px 0; }
+            .product { width: 90%; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <!-- Direct GitHub raw link to your logo (replace extension if needed, e.g., .jpg) -->
-        <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Logo/Logo%20(1).png" alt="Gin & More Logo">
-        <p>Handcrafted Italian Gin by Francesco Mattài Del Moro</p>
-    </header>
+    <div class="hero">
+        <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/refs/heads/main/Images/Logo/Logo%20(1).jpg" alt="Gin & More Logo">
+        <h1>Gin & More</h1>
+        <p>Handcrafted with Heart by Francesco Mattài Del Moro</p>
+    </div>
 
     <nav>
         <a href="#about">Our Story</a>
@@ -161,22 +166,22 @@
         <h2>The Story of Gin & More</h2>
         <p><strong>Created by Francesco Mattài Del Moro</strong></p>
         
-        <p>In autumn 2023, a simple gin tasting gift sparked a dream. Francesco designed the logo and imagined a niche, artisanal gin from his Italian homeland — one made in small batches with passion and meaning.</p>
+        <p>In autumn 2023, a gin tasting gift ignited a passion. Francesco designed the logo and crafted a niche artisanal gin from his Italian roots — small-batch, meaningful, and full of soul.</p>
 
         <h4>Gratitude</h4>
-        <p>The first distillate features pink pepper, false pepper, and <em>Artemisia</em> — the miraculous herb. This edition is dedicated to <strong>Fausto</strong>, a dear person who always hoped for a miracle. The very first bottle was made in his memory.</p>
+        <p>Featuring pink pepper, false pepper, and sacred <em>Artemisia</em>. Dedicated to <strong>Fausto</strong>, whose hope for a miracle inspired the first bottle.</p>
 
         <h4>Friendship</h4>
-        <p>The second recipe adds <strong>Moringa</strong> — known as the "tree of miracles" — with origins in India and Pakistan. Brought back by his close friend <strong>Jacopo</strong> after a trip to India, it gives the gin a fresh, summery character.</p>
+        <p>Infused with <strong>Moringa</strong>, the "tree of miracles," gifted by friend <strong>Jacopo</strong> from India for a bright, summery twist.</p>
 
         <h4>Love</h4>
-        <p>The latest creation is dedicated to Francesco’s children — <strong>Giacomo, Costanza, and Filippo</strong>. Inspired daily by their unique spirits, he added birch lymph, celebrated for its purifying properties and known as the "lymph of life."</p>
+        <p>Dedicated to Francesco's children — <strong>Giacomo, Costanza, and Filippo</strong> — with purifying birch lymph, the "lymph of life."</p>
 
         <h4>The Logo</h4>
-        <p>Designed by Francesco himself, the two <strong>M</strong>s represent his surname <em>Mattài Del Moro</em>, while the heart-shaped <strong>D</strong> symbolizes the deep love binding his family origins.</p>
+        <p>Two <strong>M</strong>s for <em>Mattài Del Moro</em>, connected by a heart-shaped <strong>D</strong> symbolizing family love.</p>
 
         <div class="instagram-link">
-            <a href="https://www.instagram.com/_ginandmore_/" target="_blank">Follow the journey on Instagram → @_ginandmore_</a>
+            <a href="https://www.instagram.com/_ginandmore_/" target="_blank">Follow us on Instagram @_ginandmore_</a>
         </div>
     </section>
 
@@ -185,37 +190,35 @@
         <div class="products-grid">
             
             <div class="product">
-                <!-- Replace with your actual bottle file path, e.g.: https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Gratitude/bottle.jpg -->
-                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Gratitude/example-bottle.jpg" alt="Gin & More - Gratitude Edition">
+                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/bottle-gratitude.jpg" alt="Gratitude Edition"> <!-- Replace with actual file name, e.g., the clearest classic bottle -->
                 <h3>Gratitude</h3>
-                <p>First edition with pink pepper and sacred Artemisia.<br>Dedicated to Fausto.</p>
+                <p>Pink pepper & Artemisia<br>Dedicated to Fausto</p>
             </div>
             
             <div class="product">
-                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Friendship/example-bottle.jpg" alt="Gin & More - Friendship Edition">
+                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/bottle-friendship.jpg" alt="Friendship Edition"> <!-- Replace with actual summery bottle file -->
                 <h3>Friendship</h3>
-                <p>Infused with Moringa — the tree of miracles.<br>Brought from India by Jacopo.</p>
+                <p>Moringa infusion<br>From Jacopo's Indian journey</p>
             </div>
             
             <div class="product">
-                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Love/example-bottle.jpg" alt="Gin & More - Love Edition">
+                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Rugby_Gin.jpg" alt="Love Edition"> <!-- Rugby_Gin as requested -->
                 <h3>Love</h3>
-                <p>With purifying birch lymph.<br>Dedicated to Giacomo, Costanza, and Filippo.</p>
+                <p>Birch lymph purity<br>For Giacomo, Costanza & Filippo</p>
             </div>
             
         </div>
     </section>
 
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>For inquiries, private tastings, or to order:</p>
+        <h2>Get in Touch</h2>
+        <p>Inquiries, tastings, or orders:</p>
         <p><strong>Email:</strong> info@ginandmore.it</p>
         <p><strong>Instagram:</strong> <a href="https://www.instagram.com/_ginandmore_/" target="_blank">@_ginandmore_</a></p>
-        <p>Handcrafted with passion in Italy</p>
     </section>
 
     <footer>
-        &copy; 2025 Gin & More • Created by Francesco Mattài Del Moro • All rights reserved
+        &copy; 2025 Gin & More • Crafted in Italy by Francesco Mattài Del Moro
     </footer>
 
 </body>
