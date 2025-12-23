@@ -8,42 +8,32 @@
 </head>
 <body>
 
-    <header>
-        <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/refs/heads/main/Images/Logo/Logo%20(1).jpg" alt="Gin & More Logo">
-    </header>
-
-    <nav>
-        <a href="home.html">Home</a>
-        <a href="story.html">Our Story</a>
-        <a href="gins.html">Our Gins</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <section>
+    <div class="page-content" style="background: white;">
         <h2>The Story of Gin & More</h2>
         <p><strong>Created by Francesco Mattài Del Moro</strong></p>
-        <p>In autumn 2023, a gin tasting gift sparked a dream. Francesco designed the logo and began crafting a niche artisanal gin from his Italian homeland — small-batch and deeply personal.</p>
+        <p>In autumn 2023, a gin tasting gift sparked a dream. Francesco designed the logo and crafted a niche artisanal gin from his Italian homeland — small-batch, meaningful, and full of soul.</p>
 
         <h4>Gratitude</h4>
-        <p>The first distillate features pink pepper, false pepper, and sacred <em>Artemisia</em>. Dedicated to <strong>Fausto</strong>, whose wish for a miracle inspired it all.</p>
+        <p>Featuring pink pepper, false pepper, and sacred <em>Artemisia</em>. Dedicated to <strong>Fausto</strong>, whose hope for a miracle inspired the first bottle.</p>
 
         <h4>Friendship</h4>
-        <p>Enhanced with <strong>Moringa</strong> — the "tree of miracles" — brought from India by close friend <strong>Jacopo</strong>.</p>
+        <p>Infused with <strong>Moringa</strong>, the "tree of miracles," gifted by friend <strong>Jacopo</strong> from India.</p>
 
         <h4>Love</h4>
         <p>Dedicated to Francesco’s children — <strong>Giacomo, Costanza, and Filippo</strong> — with purifying birch lymph, the "lymph of life."</p>
 
         <h4>The Logo</h4>
-        <p>Two <strong>M</strong>s for <em>Mattài Del Moro</em>, connected by a heart-shaped <strong>D</strong> representing family love.</p>
+        <p>Two <strong>M</strong>s for <em>Mattài Del Moro</em>, connected by a heart-shaped <strong>D</strong> symbolizing family love.</p>
 
-        <div class="instagram">
-            <a href="https://www.instagram.com/_ginandmore_/" target="_blank">Follow us on Instagram @_ginandmore_</a>
-        </div>
-    </section>
+        <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Working_Gin.jpg" alt="Crafting Gin & More" style="max-width: 800px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
 
-    <footer>
-        &copy; 2025 Gin & More • Crafted in Italy by Francesco Mattài Del Moro
-    </footer>
+        <p class="instagram-link"><a href="https://www.instagram.com/_ginandmore_/" target="_blank">Follow us on Instagram @_ginandmore_</a></p>
+    </div>
+
+    <script>
+        fetch('header.html').then(r => r.text()).then(data => document.body.insertAdjacentHTML('afterbegin', data));
+        fetch('footer.html').then(r => r.text()).then(data => document.body.insertAdjacentHTML('beforeend', data));
+    </script>
 
 </body>
 </html>

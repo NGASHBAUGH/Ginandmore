@@ -8,48 +8,37 @@
 </head>
 <body>
 
-    <header>
-        <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/refs/heads/main/Images/Logo/Logo%20(1).jpg" alt="Gin & More Logo">
-    </header>
-
-    <nav>
-        <a href="home.html">Home</a>
-        <a href="story.html">Our Story</a>
-        <a href="gins.html">Our Gins</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <section>
+    <div class="page-content" style="background: #f0f4f7;">
         <h2>Our Gins</h2>
 
         <div class="products-grid">
             <div class="product">
-                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/View_Gin.jpg" alt="Gratitude">
+                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Gin_For_Sale_1.jpg" alt="Gratitude">
                 <h3>Gratitude</h3>
-                <p>Pink pepper & sacred Artemisia<br>Dedicated to Fausto</p>
+                <p>Pink pepper & Artemisia<br>Dedicated to Fausto</p>
             </div>
 
             <div class="product">
-                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Gin_W_Glasses.jpg" alt="Friendship">
+                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Ginandmore_Sale_1.jpg" alt="Friendship">
                 <h3>Friendship</h3>
                 <p>Moringa infusion<br>From Jacopo's journey</p>
             </div>
 
             <div class="product">
-                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Rugby_Gin.jpg" alt="Love">
+                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Ginandmore_Sale_2.jpg" alt="Love">
                 <h3>Love</h3>
                 <p>Birch lymph purity<br>For Giacomo, Costanza & Filippo</p>
             </div>
         </div>
 
-        <div class="extra-img">
-            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Working_Gin.jpg" alt="Handcrafting Gin & More">
-        </div>
-    </section>
+        <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Working_Gin.jpg" alt="Handcrafting" style="max-width: 800px; border-radius: 15px; margin-top: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+        <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Rugby_Gin.jpg" alt="Lifestyle" style="max-width: 800px; border-radius: 15px; margin-top: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+    </div>
 
-    <footer>
-        &copy; 2025 Gin & More • Crafted in Italy by Francesco Mattài Del Moro
-    </footer>
+    <script>
+        fetch('header.html').then(r => r.text()).then(data => document.body.insertAdjacentHTML('afterbegin', data));
+        fetch('footer.html').then(r => r.text()).then(data => document.body.insertAdjacentHTML('beforeend', data));
+    </script>
 
 </body>
 </html>
