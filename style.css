@@ -164,3 +164,25 @@ footer {
     }
     .page-content { padding-top: 160px; }
 }
+
+/* Prevent horizontal overflow on mobile (fixes wide images/nav issues) */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure all images never exceed screen width */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hide header and nav on scroll down (applies to all pages) */
+header, nav {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hide-nav {
+    transform: translateY(-100%);
+}

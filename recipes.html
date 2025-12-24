@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes - Gin & More</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scroll.js"></script>
+</head>
+<body>
+
+    <div class="page-content" style="background: #f0f4f7;">
+        <h2>Gin & More Recipes</h2>
+        <p>Discover delicious recipes featuring our artisanal gins. Perfect for your next gathering!</p>
+
+        <div class="gallery-grid">
+            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Recipe/Recipe_1.jpg" alt="Recipe 1">
+            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Recipe/Recipe_2.jpg" alt="Recipe 2">
+            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Recipe/Recipe_3.jpg" alt="Recipe 3">
+        </div>
+
+        <p class="instagram-link"><a href="https://www.instagram.com/_ginandmore_/" target="_blank">More recipes on Instagram @_ginandmore_</a></p>
+    </div>
+
+    <script>
+        fetch('header.html').then(r => r.text()).then(data => document.body.insertAdjacentHTML('afterbegin', data));
+        fetch('footer.html').then(r => r.text()).then(data => document.body.insertAdjacentHTML('beforeend', data));
+    </script>
+
+</body>
+</html>
