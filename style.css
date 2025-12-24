@@ -59,8 +59,6 @@ nav {
     text-align: center;
     z-index: 1000;  /* Slightly lower than header so logo stays on top */
     transition: transform 0.3s ease-in-out;
-}
-nav a {
     display: inline-block;
     color: white;
     padding: 16px 20px;
