@@ -3,82 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gin & More - Artisanal Italian Gin by Francesco Mattài Del Moro</title>
-    <meta name="description" content="Gin & More - Handcrafted Italian gin born from gratitude, friendship, and love.">
+    <title>Gin & More - Artisanal Italian Gin</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scroll.js"></script>
+    <style>
+        /* Inline overrides for single-page layout */
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .hero {
+            background: url('https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Rugby_Gin.jpg') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }
+        .hero h1 { font-size: 4.5em; margin: 0; }
+        .hero p { font-size: 1.8em; }
+        .gallery-grid, .products-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 40px 20px;
+        }
+        @media (min-width: 768px) {
+            .gallery-grid, .products-grid {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .gallery-grid img { max-width: 350px; }
+            .product { width: 350px; }
+        }
+        .product {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            max-width: 350px;
+        }
+        .product h3 { font-size: 2.2em; color: #c0392b; margin: 30px 0 15px; }
+        header, nav { transition: transform 0.35s ease-in-out; }
+        .hide-nav { transform: translateY(-100%); }
+    </style>
 </head>
 <body>
 
-    <div class="hero">
+    <header>
         <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/refs/heads/main/Images/Logo/Logo%20(1).jpg" alt="Gin & More Logo">
-        <h1>Gin & More</h1>
-        <p>Handcrafted with Heart by Francesco Mattài Del Moro</p>
-    </div>
+    </header>
 
     <nav>
-        <a href="#about">Our Story</a>
-        <a href="#products">Our Gins</a>
+        <a href="#home">Home</a>
+        <a href="#story">Our Story</a>
+        <a href="#gins">Our Gins</a>
+        <a href="#recipes">Recipes</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <section id="about">
-        <h2>The Story of Gin & More</h2>
-        <p><strong>Created by Francesco Mattài Del Moro</strong></p>
-        
-        <p>In autumn 2023, a gin tasting gift ignited a passion. Francesco designed the logo and crafted a niche artisanal gin from his Italian roots — small-batch, meaningful, and full of soul.</p>
+    <!-- Home / Hero -->
+    <section id="home" class="hero">
+        <h1>Gin & More</h1>
+        <p>Handcrafted with Heart by Francesco Mattài Del Moro</p>
+    </section>
 
-        <h4>Gratitude</h4>
-        <p>Featuring pink pepper, false pepper, and sacred <em>Artemisia</em>. Dedicated to <strong>Fausto</strong>, whose hope for a miracle inspired the first bottle.</p>
-
-        <h4>Friendship</h4>
-        <p>Infused with <strong>Moringa</strong>, the "tree of miracles," gifted by friend <strong>Jacopo</strong> from India for a bright, summery twist.</p>
-
-        <h4>Love</h4>
-        <p>Dedicated to Francesco's children — <strong>Giacomo, Costanza, and Filippo</strong> — with purifying birch lymph, the "lymph of life."</p>
-
-        <h4>The Logo</h4>
-        <p>Two <strong>M</strong>s for <em>Mattài Del Moro</em>, connected by a heart-shaped <strong>D</strong> symbolizing family love.</p>
-
-        <div class="instagram-link">
-            <a href="https://www.instagram.com/_ginandmore_/" target="_blank">Follow us on Instagram @_ginandmore_</a>
+    <!-- Available Now Gallery -->
+    <section id="available">
+        <h2>Available Now</h2>
+        <div class="gallery-grid">
+            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Gin_For_Sale_1.jpg" alt="Gin For Sale">
+            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Ginandmore_Sale_1.jpg" alt="Ginandmore Sale 1">
+            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Ginandmore_Sale_2.jpg" alt="Ginandmore Sale 2">
         </div>
     </section>
 
-    <section id="products">
+    <!-- Our Story -->
+    <section id="story" style="background: white;">
+        <h2>My Gin, Its Story, and Its Future</h2>
+
+        <h4>First Spirit</h4>
+        <p>In the fall of 2023, I received a gin tasting as a gift. I had recently created my own logo and thought of putting it on a unique, niche product made in my region: GIN.</p>
+        <p>I added to the basic ingredients PINK PEPPER, which is a false pepper with phytotherapeutic properties and a mildly spicy aroma, then ARTEMISIA, a miraculous herb. I chose the latter ingredient while thinking of a dear person who has been very close to me in recent years, FAUSTO. I have always wished for a "miracle" to repay everything he has done for me over the years. Bottle no. 1 was dedicated and given to him.</p>
+
+        <h4>Second Spirit</h4>
+        <p>I decided to make a second version, adding a more refreshing, summery flavor to the first one. After researching various herbs with refreshing properties, I had the idea to add MORINGA, a plant native to India and Pakistan known for its healing properties (also called "the miracle tree"). JACOPO, another dear person to me, offered to bring me this ingredient after a trip to India.</p>
+
+        <h4>Third Spirit</h4>
+        <p>I dedicate this to my children: GIACOMO, COSTANZA, and FILIPPO, who, with their different yet similar personalities, are a source of inspiration and motivation for me every day. This is why I chose to add birch sap to the Artemisia; birch is an extraordinary plant with great purifying and beneficial properties. Birch sap, the sap of life.</p>
+
+        <h4>The Logo</h4>
+        <p>I created the logo, with the dream of turning it into a brand. Two M's... my last name, and a D that representing a heart, the heart that connects my origins, my family: MATTAI DEL MORO.</p>
+
+        <div style="margin-top: 60px; font-size: 1.2em;">
+            <strong>Francesco Mattài del Moro</strong><br>
+            +39 335 8194030 Varese<br>
+            francescomymdm@gmail.com<br><br>
+            <strong>Live Love</strong><br>
+            gin & more
+        </div>
+
+        <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Working_Gin.jpg" alt="Crafting Gin & More" style="max-width: 800px; margin-top: 50px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+    </section>
+
+    <!-- Our Gins -->
+    <section id="gins" style="background: #f0f4f7;">
         <h2>Our Gins</h2>
         <div class="products-grid">
-            
             <div class="product">
-                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/bottle-gratitude.jpg" alt="Gratitude Edition"> <!-- Replace with actual file name, e.g., the clearest classic bottle -->
+                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Gin_For_Sale_1.jpg" alt="Gratitude">
                 <h3>Gratitude</h3>
                 <p>Pink pepper & Artemisia<br>Dedicated to Fausto</p>
             </div>
-            
             <div class="product">
-                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/bottle-friendship.jpg" alt="Friendship Edition"> <!-- Replace with actual summery bottle file -->
+                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Ginandmore_Sale_1.jpg" alt="Friendship">
                 <h3>Friendship</h3>
-                <p>Moringa infusion<br>From Jacopo's Indian journey</p>
+                <p>Moringa infusion<br>From Jacopo's journey</p>
             </div>
-            
             <div class="product">
-                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Rugby_Gin.jpg" alt="Love Edition"> <!-- Rugby_Gin as requested -->
+                <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Ginandmore_Sale_2.jpg" alt="Love">
                 <h3>Love</h3>
                 <p>Birch lymph purity<br>For Giacomo, Costanza & Filippo</p>
             </div>
-            
+        </div>
+        <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/UsablePhotos/Rugby_Gin.jpg" alt="Lifestyle" style="max-width: 800px; margin-top: 50px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+    </section>
+
+    <!-- Recipes -->
+    <section id="recipes" style="background: white;">
+        <h2>Gin & More Recipes</h2>
+        <p>Discover delicious recipes featuring our artisanal gins.</p>
+        <div class="gallery-grid">
+            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Recipe/Recipe_1.jpg" alt="Recipe 1">
+            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Recipe/Recipe_2.jpg" alt="Recipe 2">
+            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Recipe/Recipe_3.jpg" alt="Recipe 3">
         </div>
     </section>
 
-    <section id="contact">
+    <!-- Contact -->
+    <section id="contact" style="background: #f0f4f7;">
         <h2>Get in Touch</h2>
-        <p>Inquiries, tastings, or orders:</p>
+        <p>For inquiries, private tastings, or to order:</p>
         <p><strong>Email:</strong> info@ginandmore.it</p>
-        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/_ginandmore_/" target="_blank">@_ginandmore_</a></p>
+        <p class="instagram-link"><a href="https://www.instagram.com/_ginandmore_/" target="_blank">Follow us on Instagram @_ginandmore_</a></p>
+
+        <div class="gallery-grid" style="margin-top: 60px;">
+            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Contact/Book.jpg" alt="Contact Scene">
+            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Contact/Meal.jpg" alt="Contact Scene">
+            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Contact/511537586_17855713164459442_3817336059645314643_n.jpg" alt="Contact Scene">
+            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/main/Images/Contact/Mountians.jpg" alt="Contact Scene">
+        </div>
     </section>
 
     <footer>
-        &copy; 2025 Gin & More • Crafted in Italy by Francesco Mattài Del Moro
+        &copy; 2025 Gin & More • Crafted in Italy by Francesco Mattài Del Moro | Version 0.01
     </footer>
+
+    <script>
+        // Hide header/nav on scroll down
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        const nav = document.querySelector('nav');
+        const delta = 5;
+        const headerHeight = header ? header.offsetHeight + (nav ? nav.offsetHeight : 0) : 0;
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (Math.abs(scrollTop - lastScrollTop) < delta) return;
+
+            if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
+                header.classList.add('hide-nav');
+                nav.classList.add('hide-nav');
+            } else {
+                header.classList.remove('hide-nav');
+                nav.classList.remove('hide-nav');
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
 
 </body>
 </html>
