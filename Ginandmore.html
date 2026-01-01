@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gin and More</title>
+    <title>Gin & More</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
             color: #333;
         }
         header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(44, 62, 80, 0.9);
+            padding: 10px 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .logo {
+            height: 80px;
         }
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
         nav ul li {
             display: inline;
@@ -30,38 +39,85 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1em;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
         }
         section {
-            padding: 40px;
+            padding: 60px 20px;
             text-align: center;
         }
         #home {
-            background-color: #ecf0f1;
+            background: url('https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/fea81e08dd84562b2302c5c9179fa36966d9711e/Images/UsablePhotos/Rugby_Gin.jpg?raw=true') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        #home h1 {
+            font-size: 4em;
+            margin: 0;
+        }
+        #home p {
+            font-size: 1.8em;
+            max-width: 800px;
         }
         #story {
             background-color: #fff;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        #story p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-align: left;
+            margin: 20px auto;
         }
         #our-gins {
-            background-color: #ecf0f1;
+            background-color: #f9f9f9;
+        }
+        #our-gins .gin-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        #our-gins .gin-item {
+            max-width: 300px;
+        }
+        #our-gins .gin-item h3 {
+            margin-bottom: 10px;
         }
         #contact {
             background-color: #fff;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        .logo {
-            max-width: 200px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
         a {
             color: #3498db;
         }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1em;
+        }
     </style>
 </head>
 <body>
+
     <header>
-        <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/fea81e08dd84562b2302c5c9179fa36966d9711e/Logo/Logo_No_Background.png" alt="Gin and More Logo" class="logo">
+        <a href="#home">
+            <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/fea81e08dd84562b2302c5c9179fa36966d9711e/Images/Logo/Logo_No_Background.jpg" alt="Gin & More Logo" class="logo">
+        </a>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -73,25 +129,66 @@
     </header>
 
     <section id="home">
-        <h1>Welcome to Gin and More</h1>
-        <p>Discover our premium Italian gins crafted with passion and tradition. Explore our story, products, and get in touch!</p>
+        <div class="container">
+            <h1>Gin & More</h1>
+            <p>Premium Italian gins crafted with passion, tradition, and a touch of rugby spirit.</p>
+        </div>
     </section>
 
     <section id="story">
-        <h1>Our Story</h1>
-        <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/fea81e08dd84562b2302c5c9179fa36966d9711e/Story/Story_English.png" alt="Our Story in English">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>Gin&amp;More was born from a passion for rugby and a love for high-quality spirits.</p>
+            <p>The idea came about during post-match gatherings with friends, where the desire to create a unique gin that reflected Italian tradition and the energy of the rugby world emerged.</p>
+            <p>After months of research and experimentation, Gin&amp;More was launched: a premium gin made with carefully selected botanicals, including juniper berries from the Italian Alps and other natural ingredients that give it a distinctive and balanced flavor.</p>
+            <p>The name "Gin&amp;More" represents not only the gin itself but also the lifestyle associated with it: friendship, sharing, and the joy of living moments together, just like on the rugby field.</p>
+            <p>Today, Gin&amp;More is appreciated by gin enthusiasts and rugby lovers alike, offering a unique experience that combines Italian craftsmanship with the passion for sport.</p>
+        </div>
     </section>
 
     <section id="our-gins">
-        <h1>Our Gins</h1>
-        <p>We offer a variety of unique gins inspired by Italian flavors. Check out our Instagram for the latest updates and detailed product information.</p>
-        <!-- Add more details or images here if additional GitHub images are available -->
+        <div class="container">
+            <h1>Our Gins</h1>
+            <p>We craft premium gins inspired by Italian traditions and the spirit of rugby.</p>
+            
+            <div class="gin-list">
+                <div class="gin-item">
+                    <h3>Classic Dry Gin</h3>
+                    <p>A balanced London Dry style gin with prominent juniper, citrus notes, and subtle herbal undertones. Perfect for classic cocktails.</p>
+                </div>
+                
+                <div class="gin-item">
+                    <h3>Rugby Gin</h3>
+                    <p>Our signature gin celebrating the rugby spirit – bold, energetic flavors with Italian botanicals and a hint of adventure.</p>
+                </div>
+                
+                <div class="gin-item">
+                    <h3>Navy Strength Gin</h3>
+                    <p>Higher proof for intense flavor. Robust juniper and spice notes, ideal for strong cocktails or sipping.</p>
+                </div>
+                
+                <div class="gin-item">
+                    <h3>Barrel Aged Gin</h3>
+                    <p>Aged in oak barrels for a smooth, rich character with vanilla, caramel, and woody notes complementing the botanicals.</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 50px;">Discover more details, photos, and latest releases on Instagram: <a href="https://www.instagram.com/_ginandmore_/" target="_blank">@_ginandmore_</a></p>
+        </div>
     </section>
 
     <section id="contact">
-        <h1>Contact Us</h1>
-        <p>Follow us on Instagram: <a href="https://www.instagram.com/_ginandmore_/" target="_blank">@_ginandmore_</a></p>
-        <p>For inquiries, please reach out via direct message on Instagram or email us at [placeholder email].</p>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Have questions or want to get in touch? Reach out via Instagram or email.</p>
+            <p>Instagram: <a href="https://www.instagram.com/_ginandmore_/" target="_blank">@_ginandmore_</a></p>
+            <p>Email: [add your email here]</p>
+        </div>
     </section>
+
+    <footer>
+        © 2025 Gin & More • Crafted in Italy • Version 0.02
+    </footer>
+
 </body>
 </html>
