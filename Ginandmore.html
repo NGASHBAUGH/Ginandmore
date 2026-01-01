@@ -30,6 +30,8 @@
             list-style: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            align-items: center;
         }
         nav ul li {
             display: inline;
@@ -43,6 +45,19 @@
         }
         nav ul li a:hover {
             text-decoration: underline;
+        }
+        .language-switcher {
+            margin-left: 20px;
+            padding-left: 20px;
+            border-left: 1px solid rgba(255,255,255,0.3);
+        }
+        .language-switcher a {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        .language-switcher a.active {
+            opacity: 1;
+            font-weight: bold;
         }
         section {
             padding: 60px 20px;
@@ -108,6 +123,11 @@
         #our-gins .gin-item h3 {
             margin-bottom: 10px;
         }
+        #our-gins .gin-item img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
         #contact {
             background-color: #fff;
         }
@@ -139,6 +159,10 @@
                 <li><a href="#story">Story</a></li>
                 <li><a href="#our-gins">Our Gins</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li class="language-switcher">
+                    <a href="?lang=en" class="active">EN</a> | 
+                    <a href="?lang=it">IT</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -167,31 +191,39 @@
             <h2>The Logo</h2>
             <p>I created the logo, with the dream of turning it into a brand. Two M's... my last name, and a D that representing a heart, the heart that connects my origins, my family: MATTAI DEL MORO.</p>
             
+            <p class="signature">
+                Francesco<br>
+                Mattai del Moro<br>
+                +39 335 8194030 Varese<br>
+                francescomymdm@gmail.com<br><br>
+                gin & more
+            </p>
         </div>
     </section>
 
     <section id="our-gins">
         <div class="container">
             <h1>Our Gins</h1>
-            <p>We craft premium gins inspired by Italian traditions and the spirit of rugby.</p>
+            <p>Three unique spirits born from personal stories and carefully selected botanicals.</p>
             
             <div class="gin-list">
                 <div class="gin-item">
-                    <h3>Classic Dry Gin</h3>
-                    <p>A balanced London Dry style gin with prominent juniper, citrus notes, and subtle herbal undertones. Perfect for classic cocktails.</p>
+                    <h3>First Spirit</h3>
+                    <p>Base gin enhanced with pink pepper and artemisia – dedicated to Fausto.</p>
                 </div>
                 
                 <div class="gin-item">
-                    <h3>Rugby Gin</h3>
-                    <p>Our signature gin celebrating the rugby spirit - bold, energetic flavors with Italian botanicals and a hint of adventure.</p>
+                    <h3>Second Spirit</h3>
+                    <p>Refreshing summer variation with the addition of moringa – "the miracle tree".</p>
                 </div>
                 
                 <div class="gin-item">
-                    <h3>Navy Strength Gin</h3>
-                    <p>Higher proof for intense flavor. Robust juniper and spice notes, ideal for strong cocktails or sipping.</p>
+                    <h3>Third Spirit</h3>
+                    <p>Dedicated to my children, featuring birch sap – the sap of life.</p>
                 </div>
             </div>
             
+            <p style="margin-top: 50px;">Discover more details, photos, and latest releases on Instagram: <a href="https://www.instagram.com/_ginandmore_/" target="_blank">@_ginandmore_</a></p>
         </div>
     </section>
 
@@ -201,14 +233,12 @@
             <p>Have questions or want to get in touch? Reach out via Instagram or email.</p>
             <p>Instagram: <a href="https://www.instagram.com/_ginandmore_/" target="_blank">@_ginandmore_</a></p>
             <p>Phone: +39 335 8194030</p>
-            <p>Email: francescomymdm@gmail.com</p>
-            </p>
-
+            <p>Email: ginandmore2022@gmail.com</p>
         </div>
     </section>
 
     <footer>
-        © 2025 Gin & More • Crafted in Italy • Version 0.04
+        © 2025 Gin & More • Crafted in Italy • Version 0.05
     </footer>
 
 </body>
