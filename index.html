@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gin & More</title>
     <style>
+        ul.Navigation.Style {
+            flex-wrap: wrap;
+            padding-right: 15px;
+            row-gap: 20px;
+        }
         .instagram-button {
             background: linear-gradient(
                 45deg,
@@ -20,7 +25,7 @@
             padding: 8px;
             border-radius: 8px;
             cursor: pointer;
-            }
+        }
 
         body {
             font-family: 'Arial', sans-serif;
@@ -182,8 +187,8 @@
         <a href="#home">
             <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/fea81e08dd84562b2302c5c9179fa36966d9711e/Images/Logo/Logo_No_Background.jpg" alt="Gin & More Logo" class="logo">
         </a>
-        <nav>
-            <ul style="padding-right: 15px;">
+        <nav class="nav-links">
+            <ul class = "Navigation Style">
                 <li><a class="it" href="#home">Home</a> <a class="en"  href="#home">Home</a></li>
                 <li><a class="it" href="#story">La Storia</a> <a class="en" href="#story">The Story</a></li>
                 <li><a class="it" href="#our-gins">I Nostri Gin</a> <a class="en" href="#our-gins">Our Gins</a></li>
