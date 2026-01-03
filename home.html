@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -123,11 +123,6 @@
         #our-gins .gin-item h3 {
             margin-bottom: 10px;
         }
-        #our-gins .gin-item img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
         #contact {
             background-color: #fff;
         }
@@ -145,7 +140,24 @@
             text-align: center;
             font-size: 1em;
         }
+        .en { display: none; }
     </style>
+    <script>
+        function switchToEnglish() {
+            document.querySelectorAll('.it').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.en').forEach(el => el.style.display = 'block');
+            document.querySelector('a[data-lang="it"]').classList.remove('active');
+            document.querySelector('a[data-lang="en"]').classList.add('active');
+            document.documentElement.lang = 'en';
+        }
+        function switchToItalian() {
+            document.querySelectorAll('.it').forEach(el => el.style.display = 'block');
+            document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+            document.querySelector('a[data-lang="en"]').classList.remove('active');
+            document.querySelector('a[data-lang="it"]').classList.add('active');
+            document.documentElement.lang = 'it';
+        }
+    </script>
 </head>
 <body>
 
@@ -154,14 +166,14 @@
             <img src="https://raw.githubusercontent.com/NGASHBAUGH/Ginandmore/fea81e08dd84562b2302c5c9179fa36966d9711e/Images/Logo/Logo_No_Background.jpg" alt="Gin & More Logo" class="logo">
         </a>
         <nav>
-            <ul style = "padding-right: 15px">
+            <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#story">Story</a></li>
-                <li><a href="#our-gins">Our Gins</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#story">La Storia</a></li>
+                <li><a href="#our-gins">I Nostri Gin</a></li>
+                <li><a href="#contact">Contatti</a></li>
                 <li class="language-switcher">
-                    <a href="?lang=en" class="active">EN</a> | 
-                    <a href="?lang=it">IT</a>
+                    <a href="javascript:switchToItalian()" data-lang="it" class="active">IT</a> | 
+                    <a href="javascript:switchToEnglish()" data-lang="en">EN</a>
                 </li>
             </ul>
         </nav>
@@ -169,68 +181,107 @@
 
     <section id="home">
         <div class="container">
-            <h1>Gin & More</h1>
-            <p>Premium Italian gins crafted with passion, tradition, and a touch of rugby spirit.</p>
+            <h1 class="it">Gin & More</h1>
+            <h1 class="en">Gin & More</h1>
+            <p class="it">Gin italiani premium artigianali, nati da passione, tradizione e un tocco di spirito rugby.</p>
+            <p class="en">Premium Italian gins crafted with passion, tradition, and a touch of rugby spirit.</p>
         </div>
     </section>
 
     <section id="story">
         <div class="container">
-            <h1>My Gin, Its Story, and Its Future</h1>
+            <h1 class="it">Il Mio Gin, la Sua Storia e il Suo Futuro</h1>
+            <h1 class="en">My Gin, Its Story, and Its Future</h1>
             
-            <h2>First Spirit</h2>
-            <p>In the fall of 2023, I received a gin tasting as a gift. I had recently created my own logo and thought of putting it on a unique, niche product made in my region: GIN.</p>
-            <p>I added to the basic ingredients PINK PEPPER, which is a false pepper with phytotherapeutic properties and a mildly spicy aroma, then ARTEMISIA, a miraculous herb. I chose the latter ingredient, while thinking of a dear person who has been very close to me in recent years, FAUSTO. I have always wished for a "miracle" to repay everything he has done for me over the years. Bottle no. 1 was dedicated and given to him.</p>
+            <h2 class="it">Primo Spirito</h2>
+            <h2 class="en">First Spirit</h2>
+            <p class="it">Nell'autunno del 2023 ho ricevuto in regalo una degustazione di gin. Avevo da poco creato il mio logo e ho pensato di applicarlo su un prodotto unico, di nicchia, realizzato nella mia regione: il GIN.</p>
+            <p class="en">In the fall of 2023, I received a gin tasting as a gift. I had recently created my own logo and thought of putting it on a unique, niche product made in my region: GIN.</p>
             
-            <h2>Second Spirit</h2>
-            <p>I decided to make a second version, adding a more refreshing, summery flavor to the first one. After researching various herbs with refreshing properties, I had the idea to add MORINGA, a plant native to India and Pakistan known for its healing properties (also called "the miracle tree"). JACOPO, another dear person to me, offered to bring me this ingredient after a trip to India.</p>
+            <p class="it">Ho aggiunto agli ingredienti base il PEPE ROSA, un falso pepe con proprietà fitoterapiche e un aroma delicatamente piccante, e poi l'ARTEMISIA, un'erba miracolosa. Ho scelto quest'ultimo ingrediente pensando a una persona cara che mi è stata molto vicina negli ultimi anni, FAUSTO. Ho sempre desiderato un “miracolo” per ricambiare tutto quello che ha fatto per me in questi anni. La bottiglia n. 1 è stata dedicata e regalata a lui.</p>
+            <p class="en">I added to the basic ingredients PINK PEPPER, which is a false pepper with phytotherapeutic properties and a mildly spicy aroma, then ARTEMISIA, a miraculous herb. I chose the latter ingredient, while thinking of a dear person who has been very close to me in recent years, FAUSTO. I have always wished for a "miracle" to repay everything he has done for me over the years. Bottle no. 1 was dedicated and given to him.</p>
             
-            <h2>Third Spirit</h2>
-            <p>I dedicate this to my children: GIACOMO, COSTANZA, and FILIPPO, who, with their different yet similar personalities, are a source of inspiration and motivation for me every day. This is why I choose to add birch sap to the Artemisia, birch is an extraordinary plant with it great purifying and beneficial properties. Birch sap, the sap of life.</p>
+            <h2 class="it">Secondo Spirito</h2>
+            <h2 class="en">Second Spirit</h2>
+            <p class="it">Ho deciso di realizzare una seconda versione, aggiungendo al primo un sapore più fresco e estivo. Dopo aver ricercato varie erbe con proprietà rinfrescanti, mi è venuta l'idea di aggiungere la MORINGA, una pianta originaria di India e Pakistan nota per le sue proprietà curative (chiamata anche “l'albero dei miracoli”). JACOPO, un'altra persona cara, si è offerto di portarmi questo ingrediente dopo un viaggio in India.</p>
+            <p class="en">I decided to make a second version, adding a more refreshing, summery flavor to the first one. After researching various herbs with refreshing properties, I had the idea to add MORINGA, a plant native to India and Pakistan known for its healing properties (also called "the miracle tree"). JACOPO, another dear person to me, offered to bring me this ingredient after a trip to India.</p>
             
-            <h2>The Logo</h2>
-            <p>I created the logo, with the dream of turning it into a brand. Two M's... my last name, and a D that representing a heart, the heart that connects my origins, my family: MATTAI DEL MORO.</p>
+            <h2 class="it">Terzo Spirito</h2>
+            <h2 class="en">Third Spirit</h2>
+            <p class="it">Lo dedico ai miei figli: GIACOMO, COSTANZA e FILIPPO, che con le loro personalità diverse ma simili sono per me ogni giorno fonte di ispirazione e motivazione. Per questo ho scelto di aggiungere alla Artemisia la linfa di betulla: la betulla è una pianta straordinaria con grandi proprietà purificanti e benefiche. La linfa di betulla, la linfa della vita.</p>
+            <p class="en">I dedicate this to my children: GIACOMO, COSTANZA, and FILIPPO, who, with their different yet similar personalities, are a source of inspiration and motivation for me every day. This is why I choose to add birch sap to the Artemisia, birch is an extraordinary plant with it great purifying and beneficial properties. Birch sap, the sap of life.</p>
+            
+            <h2 class="it">Il Logo</h2>
+            <h2 class="en">The Logo</h2>
+            <p class="it">Ho creato il logo con il sogno di trasformarlo in un marchio. Due M... il mio cognome, e una D che rappresenta un cuore, il cuore che collega le mie origini, la mia famiglia: MATTAI DEL MORO.</p>
+            <p class="en">I created the logo, with the dream of turning it into a brand. Two M's... my last name, and a D that representing a heart, the heart that connects my origins, my family: MATTAI DEL MORO.</p>
+            
+            <p class="signature it">
+                Francesco<br>
+                Mattai del Moro<br>
+                +39 335 8194030 Varese<br>
+                ginandmore2022@gmail.com<br><br>
+                gin & more
+            </p>
+            <p class="signature en">
+                Francesco<br>
+                Mattai del Moro<br>
+                +39 335 8194030 Varese<br>
+                ginandmore2022@gmail.com<br><br>
+                gin & more
+            </p>
         </div>
     </section>
 
     <section id="our-gins">
         <div class="container">
-            <h1>Our Gins</h1>
-            <p>Three unique spirits born from personal stories and carefully selected botanicals.</p>
+            <h1 class="it">I Nostri Gin</h1>
+            <h1 class="en">Our Gins</h1>
+            <p class="it">Tre spiriti unici nati da storie personali e botaniche selezionate con cura.</p>
+            <p class="en">Three unique spirits born from personal stories and carefully selected botanicals.</p>
             
             <div class="gin-list">
                 <div class="gin-item">
-                    <h3>First Spirit</h3>
-                    <p>Base gin enhanced with pink pepper and artemisia – dedicated to Fausto.</p>
+                    <h3 class="it">Primo Spirito</h3>
+                    <h3 class="en">First Spirit</h3>
+                    <p class="it">Gin base arricchito con pepe rosa e artemisia – dedicato a Fausto.</p>
+                    <p class="en">Base gin enhanced with pink pepper and artemisia – dedicated to Fausto.</p>
                 </div>
                 
                 <div class="gin-item">
-                    <h3>Second Spirit</h3>
-                    <p>Refreshing summer variation with the addition of moringa – "the miracle tree".</p>
+                    <h3 class="it">Secondo Spirito</h3>
+                    <h3 class="en">Second Spirit</h3>
+                    <p class="it">Variante estiva rinfrescante con aggiunta di moringa – “l'albero dei miracoli”.</p>
+                    <p class="en">Refreshing summer variation with the addition of moringa – "the miracle tree".</p>
                 </div>
                 
                 <div class="gin-item">
-                    <h3>Third Spirit</h3>
-                    <p>Dedicated to my children, featuring birch sap – the sap of life.</p>
+                    <h3 class="it">Terzo Spirito</h3>
+                    <h3 class="en">Third Spirit</h3>
+                    <p class="it">Dedicato ai miei figli, con linfa di betulla – la linfa della vita.</p>
+                    <p class="en">Dedicated to my children, featuring birch sap – the sap of life.</p>
                 </div>
             </div>
             
-            <p style="margin-top: 50px;">Discover more details, photos, and latest releases on Instagram: <a href="https://www.instagram.com/_ginandmore_/" target="_blank">@_ginandmore_</a></p>
+            <p style="margin-top: 50px;" class="it">Scopri maggiori dettagli, foto e ultime novità su Instagram: <a href="https://www.instagram.com/_ginandmore_/" target="_blank">@_ginandmore_</a></p>
+            <p style="margin-top: 50px;" class="en">Discover more details, photos, and latest releases on Instagram: <a href="https://www.instagram.com/_ginandmore_/" target="_blank">@_ginandmore_</a></p>
         </div>
     </section>
 
     <section id="contact">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>Have questions or want to get in touch? Reach out via Instagram or email.</p>
+            <h1 class="it">Contatti</h1>
+            <h1 class="en">Contact Us</h1>
+            <p class="it">Hai domande o vuoi contattarci? Scrivici su Instagram o via email.</p>
+            <p class="en">Have questions or want to get in touch? Reach out via Instagram or email.</p>
             <p>Instagram: <a href="https://www.instagram.com/_ginandmore_/" target="_blank">@_ginandmore_</a></p>
-            <p>Phone: +39 335 8194030</p>
+            <p>Telefono: +39 335 8194030</p>
             <p>Email: ginandmore2022@gmail.com</p>
         </div>
     </section>
 
     <footer>
-        © 2025 Gin & More • Crafted in Italy • Version 0.05
+        © 2026 Gin & More • Artigianale in Italia • Versione 0.06
     </footer>
 
 </body>
