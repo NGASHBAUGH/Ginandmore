@@ -163,18 +163,31 @@
         #gallery {
             background-color: #f9f9f9;
         }
-        #gallery .gallery-grid {
+        .gallery-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
             margin-top: 40px;
         }
-        #gallery img {
-            max-width: 300px;
+        .gallery-grid img {
+            flex: 0 1 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 900px) {
+            .gallery-grid img {
+                flex: 0 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 600px) {
+            .gallery-grid img {
+                flex: 0 1 calc(100% - 20px);
+                max-width: calc(100% - 20px);
+            }
         }
         .container {
             max-width: 1200px;
@@ -283,50 +296,6 @@
                 Francesco<br>
                 Mattai del Moro
             </p>
-        </div>
-    </section>
-
-    <section id="our-gins">
-        <div class="container">
-            <h1 class="it">I Nostri Gin</h1>
-            <h1 class="en">Our Gins</h1>
-            <p class="it">Tre spiriti unici nati da storie personali e botaniche selezionate con cura.</p>
-            <p class="en">Three unique spirits born from personal stories and carefully selected botanicals.</p>
-            
-            <div class="gin-list">
-                <div class="gin-item">
-                    <img src="Images/OurGins/Type_FriendShip.jpeg" alt="Friendship Gin">
-                    <h3 class="it">Primo Spirito</h3>
-                    <h3 class="en">First Spirit</h3>
-                    <p class="it">Gin base arricchito con pepe rosa e artemisia dedicato a Fausto.</p>
-                    <p class="en">Base gin enhanced with pink pepper and artemisia dedicated to Fausto.</p>
-                </div>
-                
-                <div class="gin-item">
-                    <img src="Images/OurGins/Type_Gratitude.jpeg" alt="Gratitude Gin">
-                    <h3 class="it">Secondo Spirito</h3>
-                    <h3 class="en">Second Spirit</h3>
-                    <p class="it">Variante estiva rinfrescante con aggiunta di moringa “l'albero dei miracoli”.</p>
-                    <p class="en">Refreshing summer variation with the addition of moringa "the miracle tree".</p>
-                </div>
-                
-                <div class="gin-item">
-                    <img src="Images/OurGins/Type_Kindness.jpeg" alt="Kindness Gin">
-                    <h3 class="it">Terzo Spirito</h3>
-                    <h3 class="en">Third Spirit</h3>
-                    <p class="it">Dedicato ai miei figli, con linfa di betulla la linfa della vita.</p>
-                    <p class="en">Dedicated to my children, featuring birch sap the sap of life.</p>
-                </div>
-                
-                <div class="gin-item">
-                    <img src="Images/OurGins/Type_Love.jpeg" alt="Love Gin">
-                    <h3 class="it">Quarto Spirito</h3>
-                    <h3 class="en">Fourth Spirit</h3>
-                    <p class="it">Ispirato a forza e cura familiare: la quinta essenza del nostro spirito.</p>
-                    <p class="en">Inspired by family strength and care: the fifth essence of our spirit.</p>
-                </div>                    <p class="en">Dedicated to my children, featuring birch sap  the sap of life.</p>
-                </div>
-            </div>
         </div>
     </section>
 
