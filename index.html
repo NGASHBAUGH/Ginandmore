@@ -163,6 +163,8 @@
             font-size: 1em;
         }
         .en { display: none; }
+        html { scroll-behavior: smooth; }
+        nav ul li a.active { text-decoration: underline; font-weight: bold; }
     </style>
     <script>
         function switchToEnglish() {
@@ -233,6 +235,11 @@
             <p class="it">Lo dedico ai miei figli: GIACOMO, COSTANZA e FILIPPO, che con le loro personalità diverse ma simili sono per me ogni giorno fonte di ispirazione e motivazione. Per questo ho scelto di aggiungere alla Artemisia la linfa di betulla: la betulla è una pianta straordinaria con grandi proprietà purificanti e benefiche. La linfa di betulla, la linfa della vita.</p>
             <p class="en">I dedicate this to my children: GIACOMO, COSTANZA, and FILIPPO, who, with their different yet similar personalities, are a source of inspiration and motivation for me every day. This is why I choose to add birch sap to the Artemisia, birch is an extraordinary plant with it great purifying and beneficial properties. Birch sap, the sap of life.</p>
             
+            
+            <h2 class="it">Quarto Spirito</h2>
+            <h2 class="en">Fourth Spirit</h2>
+            <p class="it">Ispirato ai miei figli — soprattutto a mia figlia — questa quarta creazione è nata come un sussurro.<br><br>Abbiamo piegato il fieno greco, antico portatore di benedizioni, nello spirito selvaggio e sognante dell'assenzio (mugwort). Due piante un tempo usate per proteggere, guidare, aprire il cuore.<br><br>Ciò che è emerso è un sapore che si muove dolcemente, ma porta una forza costante e luminosa — il tipo che ho sempre visto nelle donne della mia famiglia.<br><br>Un Gin modellato dalla tenerezza, radicato nella resilienza e nominato per il potere silenzioso della gentilezza stessa.</p>
+            <p class="en">Inspired by my children — most of all, my daughter — this fourth creation rose like a whisper.<br><br>We folded fenugreek, ancient bearer of blessings, into the wild, dreaming spirit of mugwort. Two plants once used to protect, to guide, to open the heart.<br><br>What emerged is a flavor that moves gently, yet carries a steady, luminous strength — the kind I've always seen in the women of my family.<br><br>A Gin shaped by tenderness, rooted in resilience, and named for the quiet power of kindness itself.</p>
             <h2 class="it">Il Logo</h2>
             <h2 class="en">The Logo</h2>
             <p class="it">Ho creato il logo con il sogno di trasformarlo in un marchio. Due M... il mio cognome, e una D che rappresenta un cuore, il cuore che collega le mie origini, la mia famiglia: MATTAI DEL MORO.</p>
@@ -294,6 +301,28 @@
     <footer>
         © 2026 Gin & More • Artigianale in Italia • Versione 1.00
     </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
