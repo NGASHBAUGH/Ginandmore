@@ -160,6 +160,22 @@
         #contact {
             background-color: #fff;
         }
+        #gallery {
+            background-color: #f9f9f9;
+        }
+        #gallery .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        #gallery img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -206,6 +222,7 @@
                 <li><a class="it" href="#home">Home</a> <a class="en"  href="#home">Home</a></li>
                 <li><a class="it" href="#story">La Storia</a> <a class="en" href="#story">The Story</a></li>
                 <li><a class="it" href="#our-gins">I Nostri Gin</a> <a class="en" href="#our-gins">Our Gins</a></li>
+                <li><a class="it" href="#gallery">Galleria</a> <a class="en" href="#gallery">Gallery</a></li>
                 <li><a class="it" href="#contact">Contatti</a> <a class="en" href="#contact">Contact</a></li>
                 <li class="language-switcher">
                     <a href="javascript:switchToItalian()" data-lang="it" class="active">IT</a> | 
@@ -304,6 +321,19 @@
                     <p class="en">Inspired by family strength and care: the fifth essence of our spirit.</p>
                 </div>                    <p class="en">Dedicated to my children, featuring birch sap  the sap of life.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <h1 class="it">Galleria</h1>
+            <h1 class="en">Gallery</h1>
+            <div class="gallery-grid">
+                <img src="Images/UsablePhotos/Gin_BeachNight.JPG" alt="Gin Beach Night">
+                <img src="Images/UsablePhotos/Gin_Fillup.JPG" alt="Gin Fillup">
+                <img src="Images/UsablePhotos/Gin_Rose.JPG" alt="Gin Rose">
+                <img src="Images/UsablePhotos/Gin_Shelved.jpeg" alt="Gin Shelved">
             </div>
         </div>
     </section>
